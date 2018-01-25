@@ -1,0 +1,33 @@
+Assignment on Core Java(Phone Book)
+
+Scenario
+==============
+==============
+
+Create Phone book having user interface like
+1.	Add new phone book entry
+2.	Search Phone Number(by Id and by Name)
+3.	Update Phone Number using id and name of the person
+4.	Delete phone book entry using id or name 
+5.	List all the entries
+6.	Quit.
+ 
+If duplicate name is added than raise a DuplicateNameException, also if same number is added with two people than it raise a DuplicateNumberException.
+All the Database operation (insert and retrieve) should be via Collection.
+Note:- 
+1.	Follow proper coding structure.
+2.	Use HashMap to store phone book entries.
+3.	Follow proper project structure. 
+4.	Use different package for Model, DAO, Service classes.
+5.	 Apply property files for loading driver information, url etc.
+6.	Project must be Maven build(Optional)
+
+Evaluation Criteria:
+======================
+======================
+
+1.	Application code must be well documented(Proper comments were able applicable)
+2.	Appropriate names should be used for class, method and variable 
+3.	Proper Exception Handling.
+4.	Proper Use of Collection.
+5.	Model, DAO and Service layer must be loosely coupled.

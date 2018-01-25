@@ -1,0 +1,11 @@
+1,1,IRS Margin Call Emails,2DWA_NEW_Send_IRS_Margin_Mail,ALert_ID#
+1,1,IRS Daily Statement Call Emails,2DWA_NEW_Send_IRS_Statement_Mail,ALert_ID#
+1,1,Futures Margin Call Emails,2DWA_NEW_Send_GMI_Margin_Mail,ALert_ID#
+1,1,Futures Daily Statement Call Emails,2DWA_NEW_Send_GMI_Statement_Mail,ALert_ID#
+2,1,FTP client check in HEDGEPROD (Sybase),2DWA_NEW_SendIRS_FTP         10/15/2016 04:29:52  10/15/2016 04:30:44  SU 188636799/1,FTP_CLIENT_ID#
+2,1,FTP client check in P2DWA (Oracle),2DWA_NEW_SendGMI_FTP         10/15/2016 04:29:52  10/15/2016 04:33:26  SU 188636799/1,FTP_CLIENT_ID#
+2,2,GMI FTP log
+2,2,IRS FTP log
+3,2,Log check for IOException
+3,1,Custom FTP Files,2DWA_NEW_GenerateConsolidatedStatement_DAILY                     10/15/2016 03:19:01  10/15/2016 03:19:24  SU 188625908/1,Client_Mapping_Id#Client_File_Type_Id#Client_File_Path#Client_File_Name#OFC_ID#Is_FTP_EMAIL#FTP_EMail_Task_Id#Product_Type#
+3,2,Log check for Custom FTP
