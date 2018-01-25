@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package org.indranil.projects.mail;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
@@ -15,10 +10,6 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-/**
- *
- * @author Twinkle
- */
 public class Main {
 
     /**
