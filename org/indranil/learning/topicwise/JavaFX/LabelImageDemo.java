@@ -24,7 +24,7 @@ public class LabelImageDemo extends Application {
 		Scene myScene = new Scene(rootNode,300,200);
 		myStage.setScene(myScene);
 		
-		Image hourglass = new Image("hourglass.png");
+		Image hourglass = new Image("F:\\\\Study\\\\Java Programming Codes\\\\Code@Indranil\\\\TemporaryArtifacts\\\\Hourglass.png");
 		ImageView hourglassIV = new ImageView(hourglass);
 		
 		Label hourglassLabel = new Label("Hourglass",  hourglassIV);

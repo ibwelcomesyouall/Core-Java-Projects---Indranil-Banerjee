@@ -30,8 +30,8 @@ public class ButtonImageDemo extends Application {
 		
 		response = new Label("Push a Button");
 		
-		Button btnHourglass = new Button("Hourglass",  new ImageView("hourglass.png"));
-		Button btnAnalogClock = new Button("Analog Clock",  new ImageView("analog.png"));
+		Button btnHourglass = new Button("Hourglass",  new ImageView("F:\\\\Study\\\\Java Programming Codes\\\\Code@Indranil\\\\TemporaryArtifacts\\\\Hourglass.png"));
+		Button btnAnalogClock = new Button("Analog Clock",  new ImageView("F:\\\\Study\\\\Java Programming Codes\\\\Code@Indranil\\\\TemporaryArtifacts\\AnalogClock.png"));
 		
 		btnHourglass.setContentDisplay(ContentDisplay.TOP);
 		btnAnalogClock.setContentDisplay(ContentDisplay.TOP);
