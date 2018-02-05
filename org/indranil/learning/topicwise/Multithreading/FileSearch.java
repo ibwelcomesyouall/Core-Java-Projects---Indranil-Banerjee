@@ -8,8 +8,8 @@ public class FileSearch {
     public static void main(String[] args)
     {
         BasicConfigurator.configure();
-        FileSearch_in_Cdrive finc = new FileSearch_in_Cdrive();
-        Thread t1 = new Thread(finc);
+        //FileSearch_in_Cdrive finc = new FileSearch_in_Cdrive();
+        //Thread t1 = new Thread(finc);
         FileSearch_in_Fdrive finf = new FileSearch_in_Fdrive();
         Thread t2 = new Thread(finf);
         //t1.start();

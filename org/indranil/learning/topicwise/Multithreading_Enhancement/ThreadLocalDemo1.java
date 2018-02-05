@@ -3,7 +3,7 @@ package org.indranil.learning.topicwise.Multithreading_Enhancement;
 public class ThreadLocalDemo1 {
     public static void main(String[]args)
     {
-        ThreadLocal tl = new ThreadLocal()
+        ThreadLocal<Object> tl = new ThreadLocal<Object>()
         {
             public Object initialValue()
             {

@@ -2,7 +2,7 @@ package org.indranil.learning.topicwise.Multithreading_Enhancement;
 
 class ParentThread2 extends Thread
 {
-    public static InheritableThreadLocal tl = new InheritableThreadLocal()
+    public static InheritableThreadLocal<Object> tl = new InheritableThreadLocal<Object>()
     {
       public Object childValue(Object p)
       {

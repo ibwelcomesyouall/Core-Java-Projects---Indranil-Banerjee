@@ -9,7 +9,7 @@ public class AutoBoxing_UnAutoBoxing {
     }
     public static void m1(Integer K)
     {
-        int m=K; //AutoUnBoxing
+        //int m=K; //AutoUnBoxing
         System.out.println(K);
     }
 }

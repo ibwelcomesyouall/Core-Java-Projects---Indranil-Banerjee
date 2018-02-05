@@ -2,8 +2,6 @@ package org.indranil.learning.topicwise.Multithreading_Enhancement;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 class MyThread301 extends Thread
 {

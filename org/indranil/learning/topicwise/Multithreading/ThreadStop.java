@@ -15,7 +15,8 @@ class MyThreadStop extends Thread
     }
 }
 public class ThreadStop {
-    public static void main(String[]args)
+    @SuppressWarnings("deprecation")
+	public static void main(String[]args)
     {
         MyThreadStop t = new MyThreadStop();
         t.start();

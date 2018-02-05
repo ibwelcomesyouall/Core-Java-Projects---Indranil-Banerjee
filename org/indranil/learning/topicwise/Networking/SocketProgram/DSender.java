@@ -1,4 +1,4 @@
-package org.indranil.learning.topicwise.Java_Networking;
+package org.indranil.learning.topicwise.Networking.SocketProgram;
 
 import java.net.*;  
 public class DSender{  
