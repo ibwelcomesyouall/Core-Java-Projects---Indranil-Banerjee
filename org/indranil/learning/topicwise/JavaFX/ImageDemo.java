@@ -23,7 +23,7 @@ public class ImageDemo extends Application {
 		Scene myScene = new Scene(rootNode,300,200);
 		myStage.setScene(myScene);
 		
-		Image hourglass = new Image("Hourglass.png");
+		Image hourglass = new Image("Artifacts//Hourglass.png");
 		ImageView hourglassIV = new ImageView(hourglass);
 		
 		rootNode.getChildren().add(hourglassIV);

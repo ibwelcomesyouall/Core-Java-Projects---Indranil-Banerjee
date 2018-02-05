@@ -1,4 +1,4 @@
-package org.indranil.learning.topicwise.soundapplication;
+package org.indranil.learning.topicwise.SoundApplication;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,7 +31,6 @@ public class SoundPlayApplication {
         }
         try
         {
-            URL soundURL= SoundPlayApplication.class.getResource("/soundapplication/owl.wav");
             AudioInputStream audioStream= AudioSystem.getAudioInputStream(soundURL);
             clip.open(audioStream);
         }

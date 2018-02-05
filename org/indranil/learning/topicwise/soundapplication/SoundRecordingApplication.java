@@ -1,4 +1,4 @@
-package org.indranil.learning.topicwise.soundapplication;
+package org.indranil.learning.topicwise.SoundApplication;
 
 import java.io.IOException;
 import java.io.File;
@@ -33,7 +33,7 @@ public class SoundRecordingApplication {
                 public void run()
                 {
                     AudioInputStream audioStream = new AudioInputStream(targetLine);
-                    File audioFile = new File("record.wav");
+                    File audioFile = new File("F:\\Study\\Java Programming Codes\\Code@Indranil\\CoreJavaProjects@IndranilBanerjee\\src\\Artifacts\\record.wav");
                     try{
                         AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, audioFile);
                     }
