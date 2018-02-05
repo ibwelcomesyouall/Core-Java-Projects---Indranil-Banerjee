@@ -31,6 +31,7 @@ public class SoundPlayApplication {
         }
         try
         {
+            URL soundURL= SoundPlayApplication.class.getResource("owl.wav");
             AudioInputStream audioStream= AudioSystem.getAudioInputStream(soundURL);
             clip.open(audioStream);
         }
