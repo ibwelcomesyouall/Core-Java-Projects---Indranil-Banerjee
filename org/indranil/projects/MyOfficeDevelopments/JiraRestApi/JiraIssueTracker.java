@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.indranil.projects.MyOfficeDevelopments.JiraRESTDbApp.Model.Issue;
-import org.indranil.projects.MyOfficeDevelopments.JiraRESTDbApp.Util.DBInsertionUtility;
-import org.indranil.projects.MyOfficeDevelopments.JiraRESTDbApp.Util.GETUtility;
+import org.indranil.projects.MyOfficeDevelopments.JiraRestApi.Model.Issue;
+import org.indranil.projects.MyOfficeDevelopments.JiraRestApi.Util.DBInsertionUtility;
+import org.indranil.projects.MyOfficeDevelopments.JiraRestApi.Util.GETUtility;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -133,6 +133,12 @@ ArrayList<Issue> FetchOpenIssueDetailsOfProject(String baseurl, String key) thro
 		
 		DBInsertionUtility dbiu = new DBInsertionUtility();
 		dbiu.insertDetailsinDB(jit.FetchOpenIssueDetailsOfProject(baseurl,key));
+		
+		/*
+		 * create table JIRATracker (ISSUE_ID varchar(100),CREATE_DATE varchar(100),PRORITY varchar(100), STATUS varchar(100))
+		   drop table JIRATracker
+		   select * from JIRATracker
+		 * */
 		
 		System.out.println(".................. Details saved in DB .................. ");
 		

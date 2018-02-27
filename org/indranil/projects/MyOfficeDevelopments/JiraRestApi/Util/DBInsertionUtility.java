@@ -3,7 +3,7 @@ package org.indranil.projects.MyOfficeDevelopments.JiraRestApi.Util;
 import java.sql.*;
 import java.util.ArrayList;
 
-import org.indranil.projects.MyOfficeDevelopments.JiraRESTDbApp.Model.Issue;
+import org.indranil.projects.MyOfficeDevelopments.JiraRestApi.Model.Issue;
 
 /**
  * JdbcInsert1.java - Demonstrates how to INSERT data into an SQL
