@@ -92,7 +92,7 @@ public static void collinelogPatternSearchDBPersister() throws IOException, Clas
     }
     
     Statement stmt2 = connection.createStatement();
-    stmt2.executeUpdate("insert into COLLINE_LOG_MONITORING_RESULT values('"+process+"','"+sla+"','"+LogMonitoring.max(actual_times,actual_timestamp_pattern)+"')");
+    stmt2.executeUpdate("insert into COLLINE_LOG_MONITORING_RESULT (PROCESS,SLA,ACTUAL_TIMESTAMP) values('"+process+"','"+sla+"','"+LogMonitoring.max(actual_times,actual_timestamp_pattern)+"')");
     
     connection.close();		
 		
