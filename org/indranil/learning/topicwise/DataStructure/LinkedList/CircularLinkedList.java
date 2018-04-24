@@ -1,8 +1,8 @@
 package org.indranil.learning.topicwise.DataStructure.LinkedList;
 
-class SLLNode{
+class CLLNode{
 	private int data;
-	private SLLNode next;
+	private CLLNode next;
 	
 	public int getData() {
 		return data;
@@ -10,10 +10,10 @@ class SLLNode{
 	public void setData(int data) {
 		this.data = data;
 	}
-	public SLLNode getNext() {
+	public CLLNode getNext() {
 		return next;
 	}
-	public void setNext(SLLNode next) {
+	public void setNext(CLLNode next) {
 		this.next = next;
 	}
 	
@@ -22,58 +22,72 @@ class SLLNode{
 	}
 }
 
-public class SinglyLinkedList {
-	private SLLNode head;
+public class CircularLinkedList {
+	private CLLNode head;
+	private CLLNode tail;
 	
-	public SinglyLinkedList() {
+	public CircularLinkedList() {
+		head = null;
+		tail = null;
 	}
 	
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 		return head == null;
 	}
 	
-	// used to insert at the beginning of the list
 	public void insertAtBegin(int data) {
-		SLLNode newNode = new SLLNode();
+		CLLNode newNode = new CLLNode();
 		newNode.setData(data);
+		
+		if(isEmpty())
+			tail = newNode;
+		
 		newNode.setNext(head);
-		head = newNode;		
+		head = newNode;
 	}
 	
 	public void insertAtEnd(int data) {
-		SLLNode current = head;
-		while(current.getNext() != null)
-			current = current.getNext(); // we'll loop until current's next reference is null
-		
-		SLLNode newNode = new SLLNode();
+		CLLNode newNode = new CLLNode();
 		newNode.setData(data);
-		current.setNext(newNode);
+		
+		if(isEmpty())
+			head = newNode;
+		else {
+			tail.setNext(newNode);
+			tail = newNode;
+		}
 	}
 	
-	public SLLNode deleteFromBegin() {
-		SLLNode temp = head;
+	public int deleteFromBegin() {
+		int temp = head.getData();
+		
+		if(head.getNext() == null)
+			tail = null;
+		
 		head = head.getNext();
 		return temp;
 	}
 	
-	public void displaySLLList() {
-		System.out.println("Singly Linked List (start --> end)");
-		SLLNode current = head;
+	public void displayCLLList() {
+		System.out.println("Circular Linked List (start --> end)");
+		CLLNode current = head;
 		while(current != null) {
 			current.displayNode();
 			current = current.getNext();
 		}
 		System.out.println();
-	}	
-
+	}
+	
 	public static void main(String[] args) {
-		SinglyLinkedList list = new SinglyLinkedList();
+		CircularLinkedList list = new CircularLinkedList();
 		list.insertAtBegin(100);
 		list.insertAtBegin(50);
 		list.insertAtBegin(99);
 		list.insertAtBegin(88);
 		list.insertAtEnd(99999);
 		
-		list.displaySLLList();
-	}	
+		list.displayCLLList();
+	}
+	
+
 }
