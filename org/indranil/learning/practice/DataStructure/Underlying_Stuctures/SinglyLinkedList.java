@@ -14,6 +14,10 @@ public class SinglyLinkedList {
 		return head;
 	}
 	
+	public void setHead(SLLNode head) {
+		this.head=head;
+	}
+	
 	@Override
 	public String toString() {
 		SLLNode current = head;
@@ -43,7 +47,7 @@ public class SinglyLinkedList {
 		insertAtBegin(87);
 		insertAtBegin(49);
 		insertAtBegin(56);
+		insertAtBegin(100);
 		
 	}
-
 }

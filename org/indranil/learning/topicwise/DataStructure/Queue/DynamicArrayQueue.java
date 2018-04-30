@@ -1,21 +1,22 @@
 package org.indranil.learning.topicwise.DataStructure.Queue;
 
-public class FixedSizeArrayQueue {
+public class DynamicArrayQueue {
 	
 	private int[] queue;
 	private int size, front, rear;
 	
 	// Default Queue Size
-	private static final int CAPACITY = 16;
+	private static int CAPACITY = 16;
+	public static int MINCAPACITY = 1<<15;
 	
-	public FixedSizeArrayQueue() {
+	public DynamicArrayQueue() {
 		queue = new int[CAPACITY];
 		size=0;
 		front=0; 
 		rear=0;
 	}
 	
-	public FixedSizeArrayQueue(int capacity) {
+	public DynamicArrayQueue(int capacity) {
 		queue = new int[capacity];
 		size=0;
 		front=0; 
@@ -24,7 +25,7 @@ public class FixedSizeArrayQueue {
 	
 	public void enQueue(int data) throws NullPointerException, IllegalStateException {
 		if(size == CAPACITY)
-			throw new IllegalStateException("Queue is full: Overflow");
+			expand();
 		else {
 			size++;
 			queue[rear] = data;
@@ -40,6 +41,7 @@ public class FixedSizeArrayQueue {
 			int data = queue[front%CAPACITY];
 			queue[front]= Integer.MIN_VALUE;
 			front = (front+1)%CAPACITY;
+			shrink();
 			return data;
 		}
 	}
@@ -55,6 +57,32 @@ public class FixedSizeArrayQueue {
 	public int size() {
 		return size;
 	}
+	
+	private void expand() {
+		int length = size();
+		int[] newQueue = new int[length<<1];
+		
+		for(int i=front; i<rear;i++)
+			newQueue[i-front] = queue[i%CAPACITY];
+		queue = newQueue;
+		front=0;
+		rear=size-1;
+		CAPACITY *=2;
+	}
+	
+	private void shrink() {
+		int length = size;
+		if(length <= MINCAPACITY || length<<2 >= length)
+			return;
+		if(length < MINCAPACITY)
+			length = MINCAPACITY;
+		
+		int[] newQueue = new int[length];
+		System.arraycopy(queue, 0, newQueue, 0, length +1);
+		queue = newQueue;
+					
+	}
+	
 	@Override
 	public String toString() {
 		String result = "[";
@@ -68,7 +96,7 @@ public class FixedSizeArrayQueue {
 	}
 	
 	public static void main(String[] args) {
-		FixedSizeArrayQueue queue = new FixedSizeArrayQueue();
+		DynamicArrayQueue queue = new DynamicArrayQueue();
 		queue.enQueue(100);
 		queue.enQueue(200);
 		queue.enQueue(300);
@@ -90,7 +118,7 @@ public class FixedSizeArrayQueue {
 		queue.enQueue(1600);
 		queue.enQueue(1700);
 		System.out.println(queue);
-		//queue.enQueue(1800); // break here
+		queue.enQueue(1800); // break here
 		queue.deQueue();
 		queue.deQueue();
 		queue.deQueue();

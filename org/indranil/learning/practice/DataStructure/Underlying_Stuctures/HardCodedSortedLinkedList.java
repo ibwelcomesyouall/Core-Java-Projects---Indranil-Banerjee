@@ -4,7 +4,7 @@ public class HardCodedSortedLinkedList {
 	
 	private SLLNode head;
 	
-	public HardCodedSortedLinkedList(){
+	public HardCodedSortedLinkedList(int data){
 		SLLNode n1 = new SLLNode();
 		SLLNode n2 = new SLLNode();
 		SLLNode n3 = new SLLNode();
@@ -18,10 +18,8 @@ public class HardCodedSortedLinkedList {
 		
 		head = n1;
 		
-		n1.setData(100); n2.setData(200); n3.setData(300); n4.setData(400);	n5.setData(500); n6.setData(600); n7.setData(700);
-		n8.setData(800); n9.setData(900); n10.setData(1000);
-		
-		// Linking the nodes so that it can form a cyclic list
+		n1.setData(data*1); n2.setData(data*2); n3.setData(data*3); n4.setData(data*4);	n5.setData(data*5); n6.setData(data*6); 
+		n7.setData(data*7); n8.setData(data*8); n9.setData(data*9); n10.setData(data*10);
 		
 		n1.setNext(n2); n2.setNext(n3); n3.setNext(n4);	n4.setNext(n5);	n5.setNext(n6);	n6.setNext(n7);	n7.setNext(n8);
 		n8.setNext(n9);	n9.setNext(n10);

@@ -6,7 +6,7 @@ import org.indranil.learning.practice.DataStructure.Underlying_Stuctures.SLLNode
 public class SortedListNodeInsertor {
 	
 	public static void main(String[] args) {
-		HardCodedSortedLinkedList list = new HardCodedSortedLinkedList();
+		HardCodedSortedLinkedList list = new HardCodedSortedLinkedList(100);
 		SLLNode newNode = new SLLNode();
 		newNode.setData(777);
 		InsertInSortedList(list.getHead(), newNode).getData();
